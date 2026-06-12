@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://mk27-gym.onrender.com/api',
 });
 
-// Add a request interceptor to include the JWT token in the header
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
